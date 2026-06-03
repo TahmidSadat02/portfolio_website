@@ -25,10 +25,7 @@ export function About() {
               <dt className="text-xs uppercase tracking-widest text-muted-foreground">Graduating</dt>
               <dd className="mt-1 font-display text-2xl">2026</dd>
             </div>
-            <div>
-              <dt className="text-xs uppercase tracking-widest text-muted-foreground">CGPA</dt>
-              <dd className="mt-1 font-display text-2xl">3.15</dd>
-            </div>
+
             <div>
               <dt className="text-xs uppercase tracking-widest text-muted-foreground">Based in</dt>
               <dd className="mt-1 font-display text-2xl">Dhaka, BD</dd>
