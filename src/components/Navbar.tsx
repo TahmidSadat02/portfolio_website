@@ -34,7 +34,8 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-[100] backdrop-blur-md transition-all ${scrolled ? "bg-background/80 border-b border-foreground/10" : "bg-background/50"}`}>
+    <>
+      <header className={`fixed inset-x-0 top-0 z-[100] backdrop-blur-md transition-all ${scrolled ? "bg-background/80 border-b border-foreground/10" : "bg-background/50"}`}>
       <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12 py-5">
         <a href="#home" className="font-display text-2xl md:text-3xl tracking-tight">
           Sadat<span className="text-[color:var(--color-accent)]">.</span>
@@ -70,14 +71,16 @@ export function Navbar() {
         </button>
       </nav>
 
+      </header>
+
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ clipPath: "inset(0 0 100% 0)" }}
-            animate={{ clipPath: "inset(0 0 0% 0)" }}
-            exit={{ clipPath: "inset(0 0 100% 0)" }}
-            transition={{ duration: 0.4, ease: [0.77, 0, 0.18, 1] }}
-            className="lg:hidden fixed inset-0 top-0 z-40 bg-foreground text-background pt-24"
+            initial={{ opacity: 0, y: "-10%" }}
+            animate={{ opacity: 1, y: "0%" }}
+            exit={{ opacity: 0, y: "-10%" }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:hidden fixed inset-0 z-[110] bg-foreground text-background pt-24"
           >
             <ul className="flex flex-col px-8">
               {LINKS.map((l, i) => (
@@ -98,9 +101,17 @@ export function Navbar() {
                 </motion.li>
               ))}
             </ul>
+            
+            {/* Close button inside the menu overlay */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-5 right-6 md:right-12 grid h-11 w-11 place-items-center rounded-full border border-background/20"
+            >
+              <X size={18} />
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }

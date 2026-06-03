@@ -77,7 +77,7 @@ export function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           style={{ x: textX, y: textY }}
-          className="relative z-10 flex flex-col justify-center pt-32 pb-16 px-6 md:px-12 lg:px-16"
+          className="relative z-10 flex flex-col justify-center pt-32 pb-16 px-6 md:px-12 lg:px-16 md:min-h-screen"
         >
           {/* Greeting */}
           <motion.p
@@ -94,7 +94,8 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="display-xl mb-4"
+            className="display-xl mb-4 text-stroke md:-webkit-text-fill-color"
+            style={{ WebkitTextFillColor: "var(--color-foreground)" }}
           >
             I'm Sadat
           </motion.h1>
@@ -136,7 +137,7 @@ export function Hero() {
               <a
                 href={resumePdf}
                 download="Tahmid_Sadat_Resume.pdf"
-                className="inline-flex items-center gap-2 rounded-full border border-foreground/30 px-6 py-3 text-sm font-medium transition hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
+                className="inline-flex items-center gap-2 rounded-full border border-foreground/30 px-6 py-3 text-sm font-medium bg-background/50 backdrop-blur-sm transition hover:border-[color:var(--color-accent)] hover:text-[color:var(--color-accent)]"
               >
                 Download Resume <Download size={16} />
               </a>
@@ -155,9 +156,9 @@ export function Hero() {
         </motion.div>
 
         {/* ── RIGHT: portrait — moves WITH cursor ── */}
-        <div className="relative hidden md:block overflow-hidden">
-          {/* Spacer so image never overlaps the navbar */}
-          <div className="h-20 w-full" />
+        <div className="absolute inset-0 md:relative md:inset-auto overflow-hidden opacity-30 md:opacity-100 min-h-screen md:min-h-0 pointer-events-none md:pointer-events-auto">
+          {/* Spacer so image never overlaps the navbar on desktop */}
+          <div className="hidden md:block h-20 w-full" />
 
           <motion.img
             src={portrait}
@@ -166,12 +167,13 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             style={{ x: imgX, y: imgY }}
-            className="absolute top-20 bottom-0 right-0 h-[calc(100%-5rem)] w-[88%] object-cover object-top grayscale contrast-110"
+            className="absolute top-0 md:top-20 bottom-0 right-0 h-full md:h-[calc(100%-5rem)] w-full md:w-[88%] object-cover object-top grayscale contrast-110 mask-image-bottom"
+            style={{ WebkitMaskImage: "linear-gradient(to bottom, black 50%, transparent 100%)", maskImage: "linear-gradient(to bottom, black 50%, transparent 100%)" }}
           />
 
           {/* Bottom fade into marquee */}
           <div
-            className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none z-10"
+            className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none z-10 hidden md:block"
             style={{
               background: "linear-gradient(to bottom, transparent, var(--color-background))",
             }}
