@@ -167,7 +167,7 @@ export function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             style={{ x: imgX, y: imgY, WebkitMaskImage: "linear-gradient(to bottom, black 50%, transparent 100%)", maskImage: "linear-gradient(to bottom, black 50%, transparent 100%)" }}
-            className="absolute top-0 md:top-20 bottom-0 right-0 h-full md:h-[calc(100%-5rem)] w-full object-cover object-top grayscale contrast-110 mask-image-bottom scale-105"
+            className="absolute top-0 md:top-20 bottom-0 right-0 h-full md:h-[calc(100%-5rem)] w-full md:w-[55%] object-cover object-top grayscale contrast-110 mask-image-bottom"
           />
 
           {/* Bottom fade into marquee */}
