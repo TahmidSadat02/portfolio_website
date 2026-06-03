@@ -156,7 +156,7 @@ export function Hero() {
         </motion.div>
 
         {/* ── RIGHT: portrait — moves WITH cursor ── */}
-        <div className="absolute inset-0 md:relative md:inset-auto overflow-hidden opacity-30 min-h-screen md:min-h-0 pointer-events-none md:pointer-events-auto">
+        <div className="absolute inset-0 md:relative md:inset-auto overflow-hidden opacity-60 min-h-screen md:min-h-0 pointer-events-none md:pointer-events-auto">
           {/* Spacer so image never overlaps the navbar on desktop */}
           <div className="hidden md:block h-20 w-full" />
 
