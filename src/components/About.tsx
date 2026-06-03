@@ -17,9 +17,9 @@ export function About() {
             I'm Tahmid Sadat — a full stack and mobile developer focused on shipping fast, considered interfaces that feel inevitable. I care about clean architecture, motion that means something, and APIs that don't fight you.
           </p>
           <dl className="mt-10 grid grid-cols-2 gap-6 border-t border-foreground/15 pt-8">
-            <div>
+            <div className="col-span-2">
               <dt className="text-xs uppercase tracking-widest text-muted-foreground">Education</dt>
-              <dd className="mt-1 font-display text-2xl">AIUB — CSE</dd>
+              <dd className="mt-1 font-display text-xl md:text-2xl">B.Sc in CSE at American International University-Bangladesh</dd>
             </div>
             <div>
               <dt className="text-xs uppercase tracking-widest text-muted-foreground">Graduating</dt>
