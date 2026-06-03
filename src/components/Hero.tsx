@@ -156,7 +156,7 @@ export function Hero() {
         </motion.div>
 
         {/* ── RIGHT: portrait — moves WITH cursor ── */}
-        <div className="absolute inset-0 md:relative md:inset-auto overflow-hidden opacity-60 min-h-screen md:min-h-0 pointer-events-none md:pointer-events-auto">
+        <div className="absolute inset-0 md:relative md:inset-auto overflow-hidden opacity-80 min-h-screen md:min-h-0 pointer-events-none md:pointer-events-auto">
           {/* Spacer so image never overlaps the navbar on desktop */}
           <div className="hidden md:block h-20 w-full" />
 
@@ -166,9 +166,8 @@ export function Hero() {
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-            style={{ x: imgX, y: imgY }}
-            className="absolute top-0 md:top-20 bottom-0 right-0 h-full md:h-[calc(100%-5rem)] w-full md:w-[88%] object-cover object-top grayscale contrast-110 mask-image-bottom"
-            style={{ WebkitMaskImage: "linear-gradient(to bottom, black 50%, transparent 100%)", maskImage: "linear-gradient(to bottom, black 50%, transparent 100%)" }}
+            style={{ x: imgX, y: imgY, WebkitMaskImage: "linear-gradient(to bottom, black 50%, transparent 100%)", maskImage: "linear-gradient(to bottom, black 50%, transparent 100%)" }}
+            className="absolute top-0 md:top-20 bottom-0 right-0 h-full md:h-[calc(100%-5rem)] w-full object-cover object-top grayscale contrast-110 mask-image-bottom scale-105"
           />
 
           {/* Bottom fade into marquee */}
