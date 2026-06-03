@@ -32,9 +32,8 @@ function Index() {
         <Contact />
       </main>
       <footer className="border-t border-foreground/10 py-8 px-6 md:px-12">
-        <div className="mx-auto max-w-[1600px] flex flex-wrap items-center justify-between gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+        <div className="mx-auto max-w-[1600px] flex flex-wrap items-center justify-center gap-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
           <span>© {new Date().getFullYear()} Tahmid Sadat</span>
-          <span>Built with care · Dhaka, BD</span>
         </div>
       </footer>
     </div>
