@@ -5,13 +5,13 @@ import portrait from "@/assets/sadat.png";
 import resumePdf from "@/assets/My_Resume.pdf";
 import { Magnetic } from "./Magnetic";
 
-const ROLES = ["DEVELOPER", "DESIGNER", "BUILDER", "CREATOR", "ENGINEER", "PROGRAMMER", "PROBLEM SOLVER"];
+const ROLES = ["DEVELOPER", "DESIGNER", "BUILDER", "CREATOR", "ENGINEER", "PROGRAMMER"];
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
 
   // Raw mouse position (normalised -0.5 → 0.5 relative to section)
-  
+
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
 
