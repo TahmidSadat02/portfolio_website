@@ -73,13 +73,20 @@ export function Hero() {
 
         {/* ── LEFT: text — moves opposite to cursor ── */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           style={{ x: textX, y: textY }}
           className="relative z-10 flex flex-col justify-center pt-32 pb-16 px-6 md:px-12 lg:px-16 md:min-h-screen"
         >
-          {/* Greeting */}
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+            className="flex flex-col"
+          >
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            >
+              {/* Greeting */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -144,6 +151,9 @@ export function Hero() {
             </Magnetic>
           </motion.div>
 
+          </motion.div>
+          </motion.div>
+
           {/* Scroll hint */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -157,15 +167,23 @@ export function Hero() {
 
         {/* ── RIGHT: portrait — moves WITH cursor ── */}
         <div className="absolute inset-0 md:relative md:inset-auto opacity-40 min-h-screen md:min-h-0 pointer-events-none md:pointer-events-auto flex items-end justify-center">
-          <motion.img
-            src={portrait}
-            alt="Tahmid Sadat portrait"
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
-            style={{ x: imgX, y: imgY, WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)", maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)" }}
-            className="h-[90vh] w-auto max-w-none grayscale contrast-110"
-          />
+          <motion.div style={{ x: imgX, y: imgY }} className="h-[90vh]">
+            <motion.div
+              animate={{ y: [0, -15, 0] }}
+              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+              className="h-full"
+            >
+              <motion.img
+                src={portrait}
+                alt="Tahmid Sadat portrait"
+                initial={{ opacity: 0, x: 60 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+                style={{ WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)", maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)" }}
+                className="h-full w-auto max-w-none grayscale contrast-110"
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>
