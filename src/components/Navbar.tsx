@@ -47,7 +47,7 @@ export function Navbar() {
               <Magnetic strength={0.25}>
                 <a
                   href={`#${l.id}`}
-                  className="relative px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] transition-colors hover:text-[color:var(--color-accent)]"
+                  className="relative block px-4 py-2 text-xs font-medium uppercase tracking-[0.18em] transition-colors hover:text-[color:var(--color-accent)]"
                 >
                   {l.label}
                   {active === l.id && (
