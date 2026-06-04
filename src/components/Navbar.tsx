@@ -36,12 +36,12 @@ export function Navbar() {
   return (
     <>
       <header className={`fixed inset-x-0 top-0 z-[100] backdrop-blur-md transition-all ${scrolled ? "bg-background/80 border-b border-foreground/10" : "bg-background/50"}`}>
-      <nav className="mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12 py-5">
+      <nav className="relative mx-auto flex max-w-[1600px] items-center justify-between px-6 md:px-12 py-5">
         <a href="#home" className="font-display text-2xl md:text-3xl tracking-tight">
           Sadat<span className="text-[color:var(--color-accent)]">.</span>
         </a>
 
-        <ul className="hidden lg:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
           {LINKS.map((l) => (
             <li key={l.id}>
               <Magnetic strength={0.25}>
