@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
 import portrait from "@/assets/sadat.png";
-import resumePdf from "@/assets/My_Resume.pdf";
+import resumePdf from "@/assets/sadat's_Resume.pdf";
 import { Magnetic } from "./Magnetic";
 
 const ROLES = ["DEVELOPER", "DESIGNER", "BUILDER", "CREATOR", "ENGINEER", "PROGRAMMER"];
