@@ -33,33 +33,22 @@ export function Hero() {
   // Typewriter effect
   useEffect(() => {
     const cur = ROLES[idx];
-    if (!cur) return;
     let i = 0;
     let deleting = false;
-    let timer: ReturnType<typeof setTimeout>;
-
     const tick = () => {
       if (!deleting) {
         i++;
         setText(cur.slice(0, i));
-        if (i === cur.length) {
-          deleting = true;
-          timer = setTimeout(tick, 1600);
-          return;
-        }
+        if (i === cur.length) { deleting = true; setTimeout(tick, 1600); return; }
       } else {
         i--;
         setText(cur.slice(0, i));
-        if (i === 0) {
-          setIdx((p) => (p + 1) % ROLES.length);
-          return;
-        }
+        if (i === 0) { setIdx((p) => (p + 1) % ROLES.length); return; }
       }
-      timer = setTimeout(tick, deleting ? 50 : 100);
+      setTimeout(tick, deleting ? 50 : 100);
     };
-
-    timer = setTimeout(tick, 200);
-    return () => clearTimeout(timer);
+    const t = setTimeout(tick, 200);
+    return () => clearTimeout(t);
   }, [idx]);
 
   // Track cursor relative to the section
@@ -113,7 +102,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="display-xl mb-4 text-stroke"
+            className="display-xl mb-4 text-stroke md:-webkit-text-fill-color"
             style={{ WebkitTextFillColor: "var(--color-foreground)" }}
           >
             I'm Sadat
@@ -129,7 +118,7 @@ export function Hero() {
           >
             <span className="text-muted-foreground whitespace-nowrap">I'm a</span>
             <span
-              aria-label={text || ROLES[idx] || "DEVELOPER"}
+              aria-label={text || "Developer"}
               className="text-[color:var(--color-accent)]"
             >
               {text}
@@ -178,7 +167,7 @@ export function Hero() {
         </motion.div>
 
         {/* ── RIGHT: portrait — moves WITH cursor ── */}
-        <div className="absolute inset-0 md:relative md:inset-auto opacity-40 md:opacity-100 min-h-screen md:min-h-0 pointer-events-none md:pointer-events-auto flex items-end justify-center">
+        <div className="absolute inset-0 md:relative md:inset-auto opacity-40 min-h-screen md:min-h-0 pointer-events-none md:pointer-events-auto flex items-end justify-center">
           <motion.div style={{ x: imgX, y: imgY }} className="h-[90vh]">
             <motion.div
               animate={{ y: [0, -15, 0] }}
