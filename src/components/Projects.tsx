@@ -9,10 +9,39 @@ type Project = {
 };
 
 const PROJECTS: Project[] = [
-  { n: "01", name: "PixoGram", desc: "A photo-first social app with real-time feed, auth, and storage on Supabase. Built as a polished mobile experience in Flutter.", tech: ["Flutter", "Dart", "Supabase", "PostgreSQL"], repo: "https://github.com/TahmidSadat02/Social-Media.git", tone: "from-amber-200/40 to-stone-300/30" },
-  { n: "02", name: "Coffee Shop System", desc: "Full-stack ordering platform with a NestJS API, Next.js storefront, and PostgreSQL — deployed to Railway.", tech: ["NestJS", "Next.js", "PostgreSQL", "Railway"], demo: "https://coffeandcode.vercel.app/", repo: "https://github.com/TahmidSadat02/REST-API_Adv.-Web-tech.git", tone: "from-amber-100/50 to-stone-200/30" },
-  { n: "03", name: "CourseHub", desc: "A course discovery and enrollment interface built in React, focused on clean information architecture and speed.", tech: ["React", "TypeScript", "Vite"], repo: "https://github.com/TahmidSadat02/CourseHub.git", tone: "from-stone-200/40 to-amber-200/30" },
-  { n: "04", name: "VITON — Virtual Try-On", desc: "An ML-driven virtual try-on prototype in Python — image pipelines, model serving, and a minimal demo UI.", tech: ["Python", "PyTorch", "OpenCV", "ML"], repo: "https://github.com/TahmidSadat02/VITON.-Virtual-Try-on-.git", tone: "from-amber-200/40 to-stone-300/30" },
+  {
+    n: "01",
+    name: "Coffee Shop Management System",
+    desc: "Built and deployed a full-stack web application with a NestJS REST API backend and Next.js frontend, live on Railway. Implemented JWT auth with RBAC (admin/customer), menu management, order processing, and Swagger UI.",
+    tech: ["NestJS", "Next.js", "TypeScript", "Supabase", "PostgreSQL"],
+    demo: "https://coffeandcode.vercel.app/",
+    repo: "https://github.com/TahmidSadat02/REST-API_Adv.-Web-tech.git",
+    tone: "from-amber-100/50 to-stone-200/30",
+  },
+  {
+    n: "02",
+    name: "PixoGram",
+    desc: "Built a photo-only social media application with authentication, follow/unfollow system, image upload, row-level security policies, and real-time data sync for a multi-user experience.",
+    tech: ["Supabase", "Flutter", "Dart", "PostgreSQL"],
+    repo: "https://github.com/TahmidSadat02/Social-Media.git",
+    tone: "from-amber-200/40 to-stone-300/30",
+  },
+  {
+    n: "03",
+    name: "VITON – Virtual Try-On",
+    desc: "Built a premium fashion e-commerce web application with separate admin panels for Men and Women product sections, banner/category management, image upload, and user authentication.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL"],
+    repo: "https://github.com/TahmidSadat02/VITON.-Virtual-Try-on-.git",
+    tone: "from-stone-200/40 to-amber-200/30",
+  },
+  {
+    n: "04",
+    name: "WordPress URL Finder",
+    desc: "Built a Next.js 16 frontend with a TypeScript worker streaming Common Crawl WARC data to discover WordPress sites, with a bounded queue and PostgreSQL FOR UPDATE SKIP LOCKED for concurrency-safe domain claiming.",
+    tech: ["Next.js", "TypeScript", "PostgreSQL"],
+    repo: "https://github.com/TahmidSadat02",
+    tone: "from-amber-200/40 to-stone-300/30",
+  },
 ];
 
 function TiltCard({ p, flip }: { p: Project; flip: boolean }) {

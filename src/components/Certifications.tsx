@@ -2,9 +2,9 @@ import { Award } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 const CERTS = [
-  { title: "Python", issuer: "Kaggle", year: "2026" },
-  { title: "AI Fundamentals", issuer: "Simplilearn", year: "2026" },
-  { title: "Machine Learning", issuer: "Simplilearn", year: "2026" },
+  { title: "Python", subtitle: "Kaggle Learn Certification", issuer: "Kaggle", year: "2026" },
+  { title: "Machine Learning Using Python", subtitle: "Professional Certificate", issuer: "Simplilearn", year: "2026" },
+  { title: "Artificial Intelligence: Beginner’s Guide", subtitle: "Professional Certificate", issuer: "Simplilearn", year: "2026" },
 ];
 
 export function Certifications() {
@@ -22,8 +22,9 @@ export function Certifications() {
                 <Award className="text-[color:var(--color-accent)]" />
                 <span className="font-display text-xl">{c.year}</span>
               </div>
-              <h3 className="font-display text-3xl mt-10">{c.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground uppercase tracking-widest">{c.issuer}</p>
+              <h3 className="font-display text-2xl mt-10">{c.title}</h3>
+              <p className="mt-1 text-sm text-[color:var(--color-accent)]">{c.subtitle}</p>
+              <p className="mt-2 text-xs text-muted-foreground uppercase tracking-widest">{c.issuer}</p>
             </div>
           </Reveal>
         ))}

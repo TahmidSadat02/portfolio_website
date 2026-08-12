@@ -2,11 +2,11 @@ import { Code2, Server, Smartphone, Database, Brain, Wrench, Layers, Terminal } 
 import { Reveal } from "./Reveal";
 
 const SKILLS = [
-  { icon: Code2, title: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind"] },
-  { icon: Terminal, title: "Languages", items: ["Python", "JavaScript", "C++", "Dart", "PHP", "HTML", "CSS"] },
-  { icon: Layers, title: "Frameworks & Libraries", items: ["React", "Next.js", "NestJS", "Flutter", "Django", "Tailwind CSS"] },
-  { icon: Database, title: "Databases & Backend", items: ["Supabase", "MySQL", "PostgreSQL", "MongoDB", "Firebase"] },
-  { icon: Wrench, title: "Tools & Platforms", items: ["Git", "GitHub", "Linux", "VS Code", "Antigravity", "n8n", "Arduino IDE", "Vite"] },
+  { icon: Terminal, title: "Languages", items: ["Python", "JavaScript", "C++", "PHP", "HTML", "CSS"] },
+  { icon: Layers, title: "Frameworks & Libraries", items: ["React", "Next.js", "NestJS", "Tailwind CSS"] },
+  { icon: Database, title: "Databases", items: ["Supabase", "MySQL", "PostgreSQL", "Firebase"] },
+  { icon: Server, title: "Backend", items: ["NestJS", "Node.JS", "REST API"] },
+  { icon: Wrench, title: "Tools & Platforms", items: ["Git", "GitHub", "Linux", "VS Code", "Antigravity", "n8n", "Arduino IDE", "Postman", "Selenium testing"] },
 ];
 
 export function Skills() {

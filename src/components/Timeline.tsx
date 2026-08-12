@@ -1,8 +1,18 @@
 import { Reveal } from "./Reveal";
 
 const ITEMS = [
-  { period: "2024 — Present", title: "Web Developer", org: "AlgoTech IT", body: "Building production web apps, API integrations, and shipping client work." },
-  { period: "2022 — 2026", title: "B.Sc. in Computer Science", org: "American International University–Bangladesh", body: "CSE major. Focus on full-stack engineering, mobile, and applied ML." },
+  {
+    period: "2025 — Present",
+    title: "Co-Founder, TechLead & Full-Stack Developer",
+    org: "AlgoTech IT",
+    body: "Co-founded a software agency delivering full-stack web applications. Led end-to-end development using Next.js, NestJS, and Supabase from client requirements to deployment, and integrated SSLCommerz payments.",
+  },
+  {
+    period: "Expected: 2026",
+    title: "B.Sc. in Computer Science & Engineering",
+    org: "American International University–Bangladesh (AIUB)",
+    body: "Major in Information Systems (Data Science, Machine Learning, Human-Computer Interaction).",
+  },
 ];
 
 export function Timeline() {

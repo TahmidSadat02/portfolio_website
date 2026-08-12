@@ -20,6 +20,7 @@ export function About() {
             <div className="col-span-2">
               <dt className="text-xs uppercase tracking-widest text-muted-foreground">Education</dt>
               <dd className="mt-1 font-display text-xl md:text-2xl">B.Sc in CSE at American International University-Bangladesh</dd>
+              <p className="text-xs text-[color:var(--color-accent)] mt-1 font-sans">Major: Information Systems (Data Science, Machine Learning, HCI)</p>
             </div>
             <div>
               <dt className="text-xs uppercase tracking-widest text-muted-foreground">Graduating</dt>
