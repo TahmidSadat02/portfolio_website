@@ -13,6 +13,12 @@ const ITEMS = [
     org: "American International University–Bangladesh (AIUB)",
     body: "Major in Information Systems (Data Science, Machine Learning, Human-Computer Interaction).",
   },
+  {
+    period: "Sep 2026 — Present",
+    title: "Intern",
+    org: "UniSoft Systems Limited",
+    body: "Contributing to enterprise software and ERP system solutions, quality assurance, and end-to-end testing across core business workflows in Dhaka, Bangladesh.",
+  },
 ];
 
 export function Timeline() {
@@ -26,7 +32,7 @@ export function Timeline() {
         <div className="absolute left-3 md:left-1/2 top-0 bottom-0 w-px bg-foreground/15" />
         <div className="space-y-16">
           {ITEMS.map((it, i) => (
-            <Reveal key={it.title} delay={i * 0.1}>
+            <Reveal key={`${it.period}-${it.org}`} delay={i * 0.1}>
               <div className={`relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-12 ${i % 2 ? "" : ""}`}>
                 <span className="absolute left-0 md:left-1/2 top-2 -translate-x-1/2 h-4 w-4 rounded-full bg-[color:var(--color-accent)] ring-4 ring-background" />
                 <div className={`${i % 2 ? "md:order-2 md:text-left md:pl-12" : "md:text-right md:pr-12"}`}>
