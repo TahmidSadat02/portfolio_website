@@ -40,7 +40,6 @@
     "@tanstack/react-query": "^5.101.0",
     "@tanstack/react-router": "^1.170.11",
     "@tanstack/react-router-devtools": "^1.167.0",
-    "@tanstack/start": "^1.120.20",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
@@ -59,8 +58,7 @@
     "tailwind-animate": "^0.2.10",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.0",
-    "vaul": "^1.1.2",
-    "vinxi": "^0.5.11"
+    "vaul": "^1.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
