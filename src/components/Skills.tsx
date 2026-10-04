@@ -6,7 +6,7 @@ const SKILLS = [
   { icon: Layers, title: "Frameworks & Libraries", items: ["React", "Next.js", "NestJS", "Tailwind CSS"] },
   { icon: Database, title: "Databases", items: ["Supabase", "MySQL", "PostgreSQL", "Firebase"] },
   { icon: Server, title: "Backend", items: ["NestJS", "Node.JS", "REST API"] },
-  { icon: Wrench, title: "Tools & Platforms", items: ["Git", "GitHub", "Linux", "VS Code", "Antigravity", "n8n", "Arduino IDE", "Postman", "Selenium testing"] },
+  { icon: Wrench, title: "Tools & Platforms", items: ["Git", "GitHub", "Linux", "VS Code", "Antigravity", "n8n", "Arduino IDE", "Postman", "Selenium", "Playwright Testing", "Odoo", "Frappe"] },
 ];
 
 export function Skills() {

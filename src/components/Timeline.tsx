@@ -17,7 +17,7 @@ const ITEMS = [
     period: "Sep 2026 — Present",
     title: "Intern",
     org: "UniSoft Systems Limited",
-    body: "Contributing to enterprise software and ERP system solutions, quality assurance, and end-to-end testing across core business workflows in Dhaka, Bangladesh.",
+    body: "Applying automated end-to-end testing using Playwright, and working with Odoo and Frappe ERP platforms across enterprise software solutions.",
   },
 ];
 
